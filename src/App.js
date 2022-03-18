@@ -8,9 +8,11 @@ function App() {
     <>
       <Router>
         <Switch>
+          
           <Route exact path="/">
             <Signup />
           </Route>
+          
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -18,7 +20,6 @@ function App() {
         </Switch>
 
       </Router>
-
 
     </>
 
