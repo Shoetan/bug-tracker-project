@@ -1,26 +1,18 @@
 import React from 'react'
 import { useState } from 'react'
+import SignUpPageHeader from './signup_page_header'
 
 function Signup() {
 
-    const [password ,setPassword] = useState("")
+  const [signUpName, setSignUpName] = useState('')
+  const[signUpEmail, setSignUpEmail] =useState('')
+    const [signUpPassword ,setSignUpPassword] = useState("")
 
-    const a = (event) => {
-        
-        setPassword (event.target.value)
-        
-    }
+
   return (
      <>
-      <header className='container mx-auto mt-2 flex justify-between'>
-
-       {/* Enter the logo here */} 
-       <h1 className='text-dark-color font-nunito font-bold'> Bug-tracker</h1>
-        
-         
-        <p className='font-nunito text-dark-color'>Already have an account? <a href="https://google.com" className='text-secondary-color hover:scale-5'>login</a> </p>
-
-      </header>
+     
+       <SignUpPageHeader />
 
       <div className="max-w-xl mx-auto mt-20 flex flex-col items-center justify-center">
         
@@ -30,21 +22,21 @@ function Signup() {
 
          <label htmlFor="" className='font-nunito text-dark-color'>Name</label>
 
-          <input type="text" placeholder='name' className='outline-none border  rounded-md p-1  mb-5'     />
+          <input type="text" placeholder='name' className='outline-none border  rounded-md p-1  mb-5' value={signUpName} onChange = {(e) => { setSignUpName(e.target.value)}}    />
           
           <label htmlFor="" className='font-nunito text-dark-color'>Email Address</label>
 
-          <input type="text" placeholder='email address' className='outline-none border  rounded-md p-1  mb-5' />
+          <input type="email" placeholder='email address' className='outline-none border  rounded-md p-1  mb-5' value={signUpEmail} onChange={(e) => { setSignUpEmail(e.target.value)}} />
           
           <label htmlFor="" className='font-nunito text-dark-color'>Password</label>
 
-          <input type="text" placeholder='password' className='outline-none border  rounded-md p-1 mb-10' value={password} onChange={ a } />
+          <input type="password" placeholder='password' className='outline-none border  rounded-md p-1 mb-10' value={signUpPassword} onChange={(e)  => {setSignUpPassword(e.target.value)}} />
           
           <button type="submit" className='font-nunito text-dark-color bg-secondary-color rounded-md p-1 hover:scale-105'>Sign up</button>
 
         </form>
         
-              <button> { password }</button>
+              <button> { signUpEmail }</button>
 
       </div>
 
@@ -52,4 +44,4 @@ function Signup() {
   )
 }
 
-export default Signup;
+export default Signup; 
