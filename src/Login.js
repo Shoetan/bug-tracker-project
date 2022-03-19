@@ -39,6 +39,8 @@ function Login() {
         <a href="# " className='font-nunito text-secondary-color hover:scale-105'> click here</a>
 
       </div>
+      
+      <p className='font-nunito text-center underline underline-offset-4 text-secondary-color'>Demo account</p>
 
 
     </>
