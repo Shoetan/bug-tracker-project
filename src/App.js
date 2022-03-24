@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Dashboard from './dashboard'
 import Login from './Login'
 import Navbar from './navbar'
 import Signup from './Signup'
@@ -22,6 +23,9 @@ function App() {
             <Navbar />
           </Route>
 
+          <Route path= "/dashboard">
+            <Dashboard/>
+          </Route>
          
         </Switch>
 

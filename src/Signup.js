@@ -16,7 +16,7 @@ function Signup() {
 
       <div className="max-w-xl mx-auto mt-20 flex flex-col items-center justify-center">
           {/* Welcome message */}
-        <h1 className='font-nunito font-medium text-xl' >Sign up</h1>
+        <h1 className='font-nunito font-medium text-xl text-dark-color' >Sign up</h1>
 
         <form className='flex flex-col w-7/12 m-10'>
 
@@ -36,7 +36,7 @@ function Signup() {
 
         </form>
 
-        <button> {signUpEmail}</button>
+         
 
       </div>
 
