@@ -15,7 +15,7 @@ const Navbar = () => {
 
             {/* Add bug button */}
             <div>
-                <button className='bg-primary-color text-dark-color p-1 rounded-md font-nunito hover:scale-105' >New bug</button>
+                <button className='bg-primary-color text-dark-color p-1 rounded-md font-nunito hover:scale-105' >New Ticket</button>
             </div>
 
         </div>
