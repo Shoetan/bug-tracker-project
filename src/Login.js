@@ -2,7 +2,8 @@
 import React from 'react'
 import LoginPageHeader from './Login_page_header';
 import { useState } from 'react'
-
+import { supabase } from './supabaseClient'
+import { useHistory } from 'react-router-dom'
 
 
 
@@ -13,6 +14,21 @@ function Login() {
 
   const [loginEmail, setLoginEmail] = useState('')
   const [loginPassword, setLoginPassword] = useState('')
+
+  const history = useHistory()
+
+  const login = async (email, password) => {
+    try {
+
+      const { error } = await supabase.auth.signIn({ email, password })
+      if (error) throw error
+      history.push('/dashboard')
+
+    } catch (error) {
+      alert(error.message)
+    }
+
+  }
 
 
 
@@ -26,7 +42,7 @@ function Login() {
         {/* Welcome message */}
         <h1 className='font-nunito font-medium text-xl text-dark-color'>Welcome</h1>
 
-        <form className='flex flex-col w-7/12 m-10'>
+        <div className='flex flex-col w-7/12 m-10'>
 
           <label className='font-nunito text-dark-color'>Email Address</label>
 
@@ -36,9 +52,9 @@ function Login() {
 
           <input type="password" placeholder='password' className='outline-none border  rounded-md p-1 mb-10' value={loginPassword} onChange = { (e) => { setLoginPassword (e.target.value)}} />
 
-          <button type="submit" className='font-nunito text-dark-color bg-secondary-color rounded-md p-1 hover:scale-105'>Login</button>
+          <button type="submit" className='font-nunito text-dark-color bg-secondary-color rounded-md p-1 hover:scale-105' onClick={() => {login(loginEmail, loginPassword)}}>Login</button>
 
-        </form>
+        </div>
 
       </div>
 
