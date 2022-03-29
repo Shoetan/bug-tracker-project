@@ -5,7 +5,7 @@ const Dashboard = () => {
     return ( 
       <><Navbar />
         <div>
-        hello
+         Hello World
         </div>
       </>
     );
