@@ -2,36 +2,32 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Dashboard from './dashboard'
 import Login from './Login'
-import Navbar from './navbar'
 import Signup from './Signup'
 
 function App() {
+
   return (
-    <>
-      <Router>
-        <Switch>
-          
-          <Route exact path="/">
-            <Signup />
-          </Route>
-          
-          <Route path="/login">
-            <Login />
-          </Route>
+  
+    <Router>
+      <Switch>
 
-          <Route path = "/navbar">
-            <Navbar />
-          </Route>
+        <Route exact path="/">
+          <Signup />
+        </Route>
 
-          <Route path= "/dashboard">
-            <Dashboard/>
-          </Route>
-         
-        </Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
 
-      </Router>
+      </Switch>
 
-    </>
+    </Router>
+   
+    
 
   )
 }

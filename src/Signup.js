@@ -21,7 +21,8 @@ function Signup() {
       if (error) throw error
       history.push('/dashboard')
 
-    } catch (error) {
+    }
+    catch (error) {
       alert(error.message)
     }
    
