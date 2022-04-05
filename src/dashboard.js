@@ -1,3 +1,4 @@
+import DashboardMain from "./dashboard-main";
 import DashBoardSideBar from "./dashboard-sidebar";
 import Navbar from "./navbar";
 
@@ -6,9 +7,10 @@ import Navbar from "./navbar";
 const Dashboard = () => {
     return ( 
       <><Navbar />
-        <div className=" flex">
+        <div className="flex mt-1 px-2 gap-2">
           
-          <DashBoardSideBar/>
+          <DashBoardSideBar />
+          <DashboardMain/>
       
         </div>
       </>
