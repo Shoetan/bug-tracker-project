@@ -1,11 +1,15 @@
+import DashBoardSideBar from "./dashboard-sidebar";
 import Navbar from "./navbar";
+
 
 
 const Dashboard = () => {
     return ( 
       <><Navbar />
-        <div>
-         Hello World
+        <div className=" flex">
+          
+          <DashBoardSideBar/>
+      
         </div>
       </>
     );

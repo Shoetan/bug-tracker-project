@@ -8,7 +8,7 @@ const Navbar = () => {
 
             {/* Search field with a search icon */}
             <div className='flex bg-primary-color items-center justify-center rounded-md p-1'>
-                <SearchIcon />
+                    <SearchIcon style={{ color: "#1b1c1e"}}/>
                 <input type="text" className='bg-primary-color outline-none rounded-md ' />
               
             </div>
