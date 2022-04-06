@@ -2,8 +2,7 @@
 import React from 'react'
 import { useState } from 'react'
 import SignUpPageHeader from './signup_page_header'
-import { supabase } from './supabaseClient';
-import { useHistory } from 'react-router-dom';
+
 
 function Signup() {
     /* Using the useState hook to handle the form. Each input field has a variable initialized to an empty string to store the current state and the setstate function tracks the change then updated the variable */
@@ -11,22 +10,7 @@ function Signup() {
   const [signUpEmail, setSignUpEmail] = useState('')
   const [signUpPassword, setSignUpPassword] = useState("")
 
-  const history = useHistory()
 
-  /* supabase */
-  const signUp = async (email, password ) => {
-    try {
-
-      const { error } = await supabase.auth.signUp({ email, password })
-      if (error) throw error
-      history.push('/dashboard')
-
-    }
-    catch (error) {
-      alert(error.message)
-    }
-   
-  }
 
 
   return (
@@ -52,7 +36,7 @@ function Signup() {
 
           <input type="password" placeholder='password' className='outline-none border  rounded-md p-1 mb-10' value={signUpPassword} onChange={(e) => { setSignUpPassword(e.target.value) }} />
 
-          <button type="submit" className='font-nunito text-dark-color bg-secondary-color rounded-md p-1 hover:scale-105' onClick={() =>{ signUp(signUpEmail, signUpPassword)}}>Sign up</button>
+          <button type="submit" className='font-nunito text-dark-color bg-secondary-color rounded-md p-1 hover:scale-105' onClick={() =>{}}>Sign up</button>
 
         </div>
 
