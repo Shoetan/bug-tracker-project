@@ -39,12 +39,16 @@ function Signup() {
         <h1 className='font-nunito font-medium text-xl text-dark-color' >Sign up</h1>
 
         <div className='flex flex-col w-7/12 m-10'>
+          
+          <label className='font-nunito text-dark-color'> Name </label>
+          
+          <input type="text" placeholder='Name' className='outline-none border rounded-md p-1 mb-5' />
 
-          <label htmlFor="" className='font-nunito text-dark-color'>Email Address</label>
+          <label className='font-nunito text-dark-color'>Email Address</label>
 
           <input type="email" placeholder='email address' className='outline-none border  rounded-md p-1  mb-5' value={signUpEmail} onChange={(e) => { setSignUpEmail(e.target.value) }} />
 
-          <label htmlFor="" className='font-nunito text-dark-color'>Password</label>
+          <label className='font-nunito text-dark-color'>Password</label>
 
           <input type="password" placeholder='password' className='outline-none border  rounded-md p-1 mb-10' value={signUpPassword} onChange={(e) => { setSignUpPassword(e.target.value) }} />
 
